@@ -1,13 +1,12 @@
 package br.ufscar.dc.entidade
 
-class Usuario {
+class Usuario extends UsuarioSec {
 
     static hasMany = [ midias: Midia ]
 
     String nome
-    String login
-    String senha
 
     static constraints = {
+        nome blank: false
     }
 }
