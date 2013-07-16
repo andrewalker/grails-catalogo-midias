@@ -11,4 +11,8 @@ class Papel {
         nome(blank: false)
         ator(blank: false)
     }
+
+    String toString() {
+        return nome + ' (' + ator + ')'
+    }
 }

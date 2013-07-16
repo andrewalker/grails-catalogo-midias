@@ -11,4 +11,8 @@ class Faixa {
         nome(blank: false)
         duracao(blank: false)
     }
+
+    String toString() {
+        return duracao + 's - ' + nome
+    }
 }

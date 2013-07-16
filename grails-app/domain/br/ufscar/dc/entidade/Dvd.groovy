@@ -9,4 +9,8 @@ class Dvd extends Midia {
     static constraints = {
         diretor(blank:false)
     }
+
+    String toString() {
+        return "DVD - " + this.titulo
+    }
 }

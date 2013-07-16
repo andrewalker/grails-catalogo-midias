@@ -7,4 +7,8 @@ class Jogo {
     static constraints = {
         genero(blank: false)
     }
+
+    String toString() {
+        return "Jogo - " + this.titulo
+    }
 }

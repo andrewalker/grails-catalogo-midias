@@ -9,4 +9,8 @@ class Cd extends Midia {
     static constraints = {
         artista(blank:false)
     }
+
+    String toString() {
+        return "CD - " + this.titulo
+    }
 }
