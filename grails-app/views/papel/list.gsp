@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="ator" title="${message(code: 'papel.ator.label', default: 'Ator')}" />
 					
+						<th><g:message code="papel.dvd.label" default="Dvd" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -37,6 +39,8 @@
 						<td><g:link action="show" id="${papelInstance.id}">${fieldValue(bean: papelInstance, field: "nome")}</g:link></td>
 					
 						<td>${fieldValue(bean: papelInstance, field: "ator")}</td>
+					
+						<td>${fieldValue(bean: papelInstance, field: "dvd")}</td>
 					
 					</tr>
 				</g:each>

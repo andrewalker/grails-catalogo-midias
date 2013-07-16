@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${faixaInstance?.cd}">
+				<li class="fieldcontain">
+					<span id="cd-label" class="property-label"><g:message code="faixa.cd.label" default="Cd" /></span>
+					
+						<span class="property-value" aria-labelledby="cd-label"><g:link controller="cd" action="show" id="${faixaInstance?.cd?.id}">${faixaInstance?.cd?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

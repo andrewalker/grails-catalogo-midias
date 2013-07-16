@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="duracao" title="${message(code: 'faixa.duracao.label', default: 'Duracao')}" />
 					
+						<th><g:message code="faixa.cd.label" default="Cd" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -37,6 +39,8 @@
 						<td><g:link action="show" id="${faixaInstance.id}">${fieldValue(bean: faixaInstance, field: "nome")}</g:link></td>
 					
 						<td>${fieldValue(bean: faixaInstance, field: "duracao")}</td>
+					
+						<td>${fieldValue(bean: faixaInstance, field: "cd")}</td>
 					
 					</tr>
 				</g:each>

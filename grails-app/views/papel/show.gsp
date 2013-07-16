@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${papelInstance?.dvd}">
+				<li class="fieldcontain">
+					<span id="dvd-label" class="property-label"><g:message code="papel.dvd.label" default="Dvd" /></span>
+					
+						<span class="property-value" aria-labelledby="dvd-label"><g:link controller="dvd" action="show" id="${papelInstance?.dvd?.id}">${papelInstance?.dvd?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

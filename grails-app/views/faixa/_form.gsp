@@ -18,3 +18,11 @@
 	<g:field name="duracao" type="number" value="${faixaInstance.duracao}" required=""/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: faixaInstance, field: 'cd', 'error')} required">
+	<label for="cd">
+		<g:message code="faixa.cd.label" default="Cd" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="cd" name="cd.id" from="${br.ufscar.dc.entidade.Cd.list()}" optionKey="id" required="" value="${faixaInstance?.cd?.id}" class="many-to-one"/>
+</div>
+
