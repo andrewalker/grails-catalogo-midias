@@ -24,37 +24,21 @@
 			<table>
 				<thead>
 					<tr>
-					
 						<g:sortableColumn property="username" title="${message(code: 'usuario.username.label', default: 'Username')}" />
-					
-						<g:sortableColumn property="password" title="${message(code: 'usuario.password.label', default: 'Password')}" />
-					
 						<g:sortableColumn property="nome" title="${message(code: 'usuario.nome.label', default: 'Nome')}" />
-					
 						<g:sortableColumn property="accountExpired" title="${message(code: 'usuario.accountExpired.label', default: 'Account Expired')}" />
-					
 						<g:sortableColumn property="accountLocked" title="${message(code: 'usuario.accountLocked.label', default: 'Account Locked')}" />
-					
 						<g:sortableColumn property="enabled" title="${message(code: 'usuario.enabled.label', default: 'Enabled')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${usuarioInstanceList}" status="i" var="usuarioInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
 						<td><g:link action="show" id="${usuarioInstance.id}">${fieldValue(bean: usuarioInstance, field: "username")}</g:link></td>
-					
-						<td>${fieldValue(bean: usuarioInstance, field: "password")}</td>
-					
 						<td>${fieldValue(bean: usuarioInstance, field: "nome")}</td>
-					
 						<td><g:formatBoolean boolean="${usuarioInstance.accountExpired}" /></td>
-					
 						<td><g:formatBoolean boolean="${usuarioInstance.accountLocked}" /></td>
-					
 						<td><g:formatBoolean boolean="${usuarioInstance.enabled}" /></td>
-					
 					</tr>
 				</g:each>
 				</tbody>

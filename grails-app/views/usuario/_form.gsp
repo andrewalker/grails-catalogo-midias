@@ -15,7 +15,7 @@
 		<g:message code="usuario.password.label" default="Password" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="password" required="" value="${usuarioInstance?.password}"/>
+	<input id="password" name="password" type="password" required="" value="${usuarioInstance?.password}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'nome', 'error')} required">
@@ -29,7 +29,6 @@
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'accountExpired', 'error')} ">
 	<label for="accountExpired">
 		<g:message code="usuario.accountExpired.label" default="Account Expired" />
-		
 	</label>
 	<g:checkBox name="accountExpired" value="${usuarioInstance?.accountExpired}" />
 </div>
