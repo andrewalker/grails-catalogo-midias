@@ -28,12 +28,7 @@ class LoginController {
 	 * Default action; redirects to 'defaultTargetUrl' if logged in, /login/auth otherwise.
 	 */
 	def index = {
-		if (springSecurityService.isLoggedIn()) {
-			redirect uri: SpringSecurityUtils.securityConfig.successHandler.defaultTargetUrl
-		}
-		else {
-			redirect action: 'auth', params: params
-		}
+        redirect action: 'auth', params: params
 	}
 
 	/**
@@ -43,10 +38,19 @@ class LoginController {
 
 		def config = SpringSecurityUtils.securityConfig
 
-		if (springSecurityService.isLoggedIn()) {
-			redirect uri: config.successHandler.defaultTargetUrl
-			return
-		}
+        def adminRole = br.ufscar.dc.entidade.PapelSec.findByAuthority("ROLE_ADMIN")
+        def userRole  = br.ufscar.dc.entidade.PapelSec.findByAuthority("ROLE_USER")
+
+        if (springSecurityService.isLoggedIn()) {
+            def user = springSecurityService.getCurrentUser()
+            if (user.getAuthorities().contains(adminRole)) {
+                redirect controller: 'usuario'
+                return
+            } else {
+                redirect controller: 'cd'
+                return
+            }
+        }
 
 		String view = 'auth'
 		String postUrl = "${request.contextPath}${config.apf.filterProcessesUrl}"
