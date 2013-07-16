@@ -2,7 +2,7 @@ package br.ufscar.dc.entidade
 
 class Faixa {
 
-    belongsTo = Cd
+    static belongsTo = Cd
 
     String nome
     int duracao

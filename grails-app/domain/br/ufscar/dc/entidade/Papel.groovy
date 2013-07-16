@@ -2,7 +2,7 @@ package br.ufscar.dc.entidade
 
 class Papel {
 
-    belongsTo = Dvd
+    static belongsTo = Dvd
 
     String nome
     String ator
