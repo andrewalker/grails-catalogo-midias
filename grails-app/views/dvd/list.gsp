@@ -8,6 +8,7 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
+        <g:render template="/layout/menu"/>
 		<a href="#list-dvd" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
@@ -23,25 +24,21 @@
 			<table>
 				<thead>
 					<tr>
-					
 						<g:sortableColumn property="titulo" title="${message(code: 'dvd.titulo.label', default: 'Titulo')}" />
-					
 						<g:sortableColumn property="ano" title="${message(code: 'dvd.ano.label', default: 'Ano')}" />
-					
 						<g:sortableColumn property="diretor" title="${message(code: 'dvd.diretor.label', default: 'Diretor')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${dvdInstanceList}" status="i" var="dvdInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+
 						<td><g:link action="show" id="${dvdInstance.id}">${fieldValue(bean: dvdInstance, field: "titulo")}</g:link></td>
-					
+
 						<td>${fieldValue(bean: dvdInstance, field: "ano")}</td>
-					
+
 						<td>${fieldValue(bean: dvdInstance, field: "diretor")}</td>
-					
+
 					</tr>
 				</g:each>
 				</tbody>
