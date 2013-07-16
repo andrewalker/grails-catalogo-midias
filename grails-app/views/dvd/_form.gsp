@@ -26,12 +26,10 @@
 	<g:textField name="diretor" required="" value="${dvdInstance?.diretor}"/>
 </div>
 
-<g:if test="${dvdInstance?.papeis}">
-    <div class="fieldcontain">
-        <span id="papeis-label" class="property-label"><g:message code="dvd.papeis.label" default="Papéis" /></span>
-        <g:each in="${dvdInstance.papeis}" var="f">
-        <span class="property-value" aria-labelledby="papeis-label"><g:link controller="papel" action="show" id="${f.id}">${f?.encodeAsHTML()}</g:link></span>
-        </g:each>
-        <span class="property-value" aria-labelledby="papeis-label"><g:link controller="papel" action="create" params="['Dvd.id': dvdInstance?.id]"><g:message code="papel.new" default="New Role" /></g:link></span>
-    </div>
-</g:if>
+<div class="fieldcontain">
+    <span id="papeis-label" class="property-label"><g:message code="dvd.papeis.label" default="Papéis" /></span>
+    <g:each in="${dvdInstance.papeis}" var="f">
+    <span class="property-value" aria-labelledby="papeis-label"><g:link controller="papel" action="show" id="${f.id}">${f?.encodeAsHTML()}</g:link></span>
+    </g:each>
+    <span class="property-value" aria-labelledby="papeis-label"><g:link controller="papel" action="create" params="['Dvd.id': dvdInstance?.id]"><g:message code="papel.new" default="New Role" /></g:link></span>
+</div>

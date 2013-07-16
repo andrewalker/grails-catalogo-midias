@@ -26,12 +26,10 @@
 	<g:textField name="artista" required="" value="${cdInstance?.artista}"/>
 </div>
 
-<g:if test="${cdInstance?.faixas}">
-    <div class="fieldcontain">
-        <span id="faixas-label" class="property-label"><g:message code="cd.faixas.label" default="Faixas" /></span>
-        <g:each in="${cdInstance.faixas}" var="f">
-        <span class="property-value" aria-labelledby="faixas-label"><g:link controller="faixa" action="show" id="${f.id}">${f?.encodeAsHTML()}</g:link></span>
-        </g:each>
-        <span class="property-value" aria-labelledby="faixas-label"><g:link controller="faixa" action="create" params="['Cd.id': cdInstance?.id]"><g:message code="faixa.new" default="New Track" /></g:link></span>
-    </div>
-</g:if>
+<div class="fieldcontain">
+    <span id="faixas-label" class="property-label"><g:message code="cd.faixas.label" default="Faixas" /></span>
+    <g:each in="${cdInstance.faixas}" var="f">
+    <span class="property-value" aria-labelledby="faixas-label"><g:link controller="faixa" action="show" id="${f.id}">${f?.encodeAsHTML()}</g:link></span>
+    </g:each>
+    <span class="property-value" aria-labelledby="faixas-label"><g:link controller="faixa" action="create" params="['Cd.id': cdInstance?.id]"><g:message code="faixa.new" default="New Track" /></g:link></span>
+</div>
