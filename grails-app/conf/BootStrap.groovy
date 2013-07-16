@@ -42,6 +42,31 @@ class BootStrap {
             }
 
             UsuarioSecPapelSec.create(maria, usuarioPapel)
+
+            // create dvd
+
+            def tonto = new Papel(
+                nome: "Tonto",
+                ator: "Johnny Depp"
+            )
+            tonto.save()
+
+            def reid = new Papel(
+                nome: "John Reid",
+                ator: "Armie Hammer"
+            )
+            reid.save()
+
+            def mydvd = new Dvd(
+                titulo: "The Lone Ranger",
+                ano: 2013,
+                diretor: "Gore Verbinski"
+            )
+            mydvd.save()
+
+            mydvd.addToPapeis(tonto)
+            mydvd.addToPapeis(reid)
+
         }
     }
     def destroy = {
