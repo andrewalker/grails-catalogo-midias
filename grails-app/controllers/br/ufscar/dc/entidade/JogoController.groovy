@@ -1,7 +1,9 @@
 package br.ufscar.dc.entidade
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.plugins.springsecurity.Secured
 
+@Secured(['ROLE_USER'])
 class JogoController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
