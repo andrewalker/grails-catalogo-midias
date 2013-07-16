@@ -8,5 +8,7 @@ class Papel {
     String ator
 
     static constraints = {
+        nome(blank: false)
+        ator(blank: false)
     }
 }

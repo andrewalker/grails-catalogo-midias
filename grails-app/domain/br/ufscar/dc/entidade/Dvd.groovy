@@ -7,5 +7,6 @@ class Dvd extends Midia {
     String diretor
 
     static constraints = {
+        diretor(blank:false)
     }
 }

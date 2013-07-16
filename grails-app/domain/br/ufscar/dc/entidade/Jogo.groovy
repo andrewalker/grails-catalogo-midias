@@ -5,5 +5,6 @@ class Jogo {
     String genero
 
     static constraints = {
+        genero(blank: false)
     }
 }

@@ -8,5 +8,7 @@ class Midia {
     int ano
 
     static constraints = {
+        titulo(blank: false)
+        ano(range: 1900..2100)
     }
 }

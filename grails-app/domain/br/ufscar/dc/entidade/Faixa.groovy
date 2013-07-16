@@ -8,5 +8,7 @@ class Faixa {
     int duracao
 
     static constraints = {
+        nome(blank: false)
+        duracao(blank: false)
     }
 }

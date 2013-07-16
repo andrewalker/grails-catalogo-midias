@@ -7,5 +7,6 @@ class Cd extends Midia {
     String artista
 
     static constraints = {
+        artista(blank:false)
     }
 }
