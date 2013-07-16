@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list papel">
 			
-				<g:if test="${papelInstance?.ator}">
-				<li class="fieldcontain">
-					<span id="ator-label" class="property-label"><g:message code="papel.ator.label" default="Ator" /></span>
-					
-						<span class="property-value" aria-labelledby="ator-label"><g:fieldValue bean="${papelInstance}" field="ator"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${papelInstance?.nome}">
 				<li class="fieldcontain">
 					<span id="nome-label" class="property-label"><g:message code="papel.nome.label" default="Nome" /></span>
 					
 						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${papelInstance}" field="nome"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${papelInstance?.ator}">
+				<li class="fieldcontain">
+					<span id="ator-label" class="property-label"><g:message code="papel.ator.label" default="Ator" /></span>
+					
+						<span class="property-value" aria-labelledby="ator-label"><g:fieldValue bean="${papelInstance}" field="ator"/></span>
 					
 				</li>
 				</g:if>

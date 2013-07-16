@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list faixa">
 			
-				<g:if test="${faixaInstance?.duracao}">
-				<li class="fieldcontain">
-					<span id="duracao-label" class="property-label"><g:message code="faixa.duracao.label" default="Duracao" /></span>
-					
-						<span class="property-value" aria-labelledby="duracao-label"><g:fieldValue bean="${faixaInstance}" field="duracao"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${faixaInstance?.nome}">
 				<li class="fieldcontain">
 					<span id="nome-label" class="property-label"><g:message code="faixa.nome.label" default="Nome" /></span>
 					
 						<span class="property-value" aria-labelledby="nome-label"><g:fieldValue bean="${faixaInstance}" field="nome"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${faixaInstance?.duracao}">
+				<li class="fieldcontain">
+					<span id="duracao-label" class="property-label"><g:message code="faixa.duracao.label" default="Duracao" /></span>
+					
+						<span class="property-value" aria-labelledby="duracao-label"><g:fieldValue bean="${faixaInstance}" field="duracao"/></span>
 					
 				</li>
 				</g:if>

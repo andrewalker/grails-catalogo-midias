@@ -2,19 +2,19 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: midiaInstance, field: 'titulo', 'error')} required">
+	<label for="titulo">
+		<g:message code="midia.titulo.label" default="Titulo" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="titulo" required="" value="${midiaInstance?.titulo}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: midiaInstance, field: 'ano', 'error')} required">
 	<label for="ano">
 		<g:message code="midia.ano.label" default="Ano" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="ano" type="number" value="${midiaInstance.ano}" required=""/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: midiaInstance, field: 'titulo', 'error')} ">
-	<label for="titulo">
-		<g:message code="midia.titulo.label" default="Titulo" />
-		
-	</label>
-	<g:textField name="titulo" value="${midiaInstance?.titulo}"/>
+	<g:select name="ano" from="${1900..2100}" class="range" required="" value="${fieldValue(bean: midiaInstance, field: 'ano')}"/>
 </div>
 

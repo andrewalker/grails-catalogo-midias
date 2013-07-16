@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list midia">
 			
-				<g:if test="${midiaInstance?.ano}">
-				<li class="fieldcontain">
-					<span id="ano-label" class="property-label"><g:message code="midia.ano.label" default="Ano" /></span>
-					
-						<span class="property-value" aria-labelledby="ano-label"><g:fieldValue bean="${midiaInstance}" field="ano"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${midiaInstance?.titulo}">
 				<li class="fieldcontain">
 					<span id="titulo-label" class="property-label"><g:message code="midia.titulo.label" default="Titulo" /></span>
 					
 						<span class="property-value" aria-labelledby="titulo-label"><g:fieldValue bean="${midiaInstance}" field="titulo"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${midiaInstance?.ano}">
+				<li class="fieldcontain">
+					<span id="ano-label" class="property-label"><g:message code="midia.ano.label" default="Ano" /></span>
+					
+						<span class="property-value" aria-labelledby="ano-label"><g:fieldValue bean="${midiaInstance}" field="ano"/></span>
 					
 				</li>
 				</g:if>

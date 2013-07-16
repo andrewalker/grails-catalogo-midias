@@ -24,11 +24,11 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="titulo" title="${message(code: 'dvd.titulo.label', default: 'Titulo')}" />
+					
 						<g:sortableColumn property="ano" title="${message(code: 'dvd.ano.label', default: 'Ano')}" />
 					
 						<g:sortableColumn property="diretor" title="${message(code: 'dvd.diretor.label', default: 'Diretor')}" />
-					
-						<g:sortableColumn property="titulo" title="${message(code: 'dvd.titulo.label', default: 'Titulo')}" />
 					
 					</tr>
 				</thead>
@@ -36,11 +36,11 @@
 				<g:each in="${dvdInstanceList}" status="i" var="dvdInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${dvdInstance.id}">${fieldValue(bean: dvdInstance, field: "ano")}</g:link></td>
+						<td><g:link action="show" id="${dvdInstance.id}">${fieldValue(bean: dvdInstance, field: "titulo")}</g:link></td>
+					
+						<td>${fieldValue(bean: dvdInstance, field: "ano")}</td>
 					
 						<td>${fieldValue(bean: dvdInstance, field: "diretor")}</td>
-					
-						<td>${fieldValue(bean: dvdInstance, field: "titulo")}</td>
 					
 					</tr>
 				</g:each>

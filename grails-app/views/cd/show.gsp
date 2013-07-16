@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list cd">
 			
+				<g:if test="${cdInstance?.titulo}">
+				<li class="fieldcontain">
+					<span id="titulo-label" class="property-label"><g:message code="cd.titulo.label" default="Titulo" /></span>
+					
+						<span class="property-value" aria-labelledby="titulo-label"><g:fieldValue bean="${cdInstance}" field="titulo"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${cdInstance?.ano}">
 				<li class="fieldcontain">
 					<span id="ano-label" class="property-label"><g:message code="cd.ano.label" default="Ano" /></span>
@@ -48,15 +57,6 @@
 						<g:each in="${cdInstance.faixas}" var="f">
 						<span class="property-value" aria-labelledby="faixas-label"><g:link controller="faixa" action="show" id="${f.id}">${f?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${cdInstance?.titulo}">
-				<li class="fieldcontain">
-					<span id="titulo-label" class="property-label"><g:message code="cd.titulo.label" default="Titulo" /></span>
-					
-						<span class="property-value" aria-labelledby="titulo-label"><g:fieldValue bean="${cdInstance}" field="titulo"/></span>
 					
 				</li>
 				</g:if>

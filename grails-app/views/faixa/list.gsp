@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="duracao" title="${message(code: 'faixa.duracao.label', default: 'Duracao')}" />
-					
 						<g:sortableColumn property="nome" title="${message(code: 'faixa.nome.label', default: 'Nome')}" />
+					
+						<g:sortableColumn property="duracao" title="${message(code: 'faixa.duracao.label', default: 'Duracao')}" />
 					
 					</tr>
 				</thead>
@@ -34,9 +34,9 @@
 				<g:each in="${faixaInstanceList}" status="i" var="faixaInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${faixaInstance.id}">${fieldValue(bean: faixaInstance, field: "duracao")}</g:link></td>
+						<td><g:link action="show" id="${faixaInstance.id}">${fieldValue(bean: faixaInstance, field: "nome")}</g:link></td>
 					
-						<td>${fieldValue(bean: faixaInstance, field: "nome")}</td>
+						<td>${fieldValue(bean: faixaInstance, field: "duracao")}</td>
 					
 					</tr>
 				</g:each>

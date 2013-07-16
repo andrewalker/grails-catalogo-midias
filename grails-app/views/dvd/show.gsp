@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list dvd">
 			
+				<g:if test="${dvdInstance?.titulo}">
+				<li class="fieldcontain">
+					<span id="titulo-label" class="property-label"><g:message code="dvd.titulo.label" default="Titulo" /></span>
+					
+						<span class="property-value" aria-labelledby="titulo-label"><g:fieldValue bean="${dvdInstance}" field="titulo"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${dvdInstance?.ano}">
 				<li class="fieldcontain">
 					<span id="ano-label" class="property-label"><g:message code="dvd.ano.label" default="Ano" /></span>
@@ -48,15 +57,6 @@
 						<g:each in="${dvdInstance.papeis}" var="p">
 						<span class="property-value" aria-labelledby="papeis-label"><g:link controller="papel" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${dvdInstance?.titulo}">
-				<li class="fieldcontain">
-					<span id="titulo-label" class="property-label"><g:message code="dvd.titulo.label" default="Titulo" /></span>
-					
-						<span class="property-value" aria-labelledby="titulo-label"><g:fieldValue bean="${dvdInstance}" field="titulo"/></span>
 					
 				</li>
 				</g:if>

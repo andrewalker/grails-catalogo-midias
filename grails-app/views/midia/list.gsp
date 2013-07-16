@@ -24,9 +24,9 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="ano" title="${message(code: 'midia.ano.label', default: 'Ano')}" />
-					
 						<g:sortableColumn property="titulo" title="${message(code: 'midia.titulo.label', default: 'Titulo')}" />
+					
+						<g:sortableColumn property="ano" title="${message(code: 'midia.ano.label', default: 'Ano')}" />
 					
 					</tr>
 				</thead>
@@ -34,9 +34,9 @@
 				<g:each in="${midiaInstanceList}" status="i" var="midiaInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${midiaInstance.id}">${fieldValue(bean: midiaInstance, field: "ano")}</g:link></td>
+						<td><g:link action="show" id="${midiaInstance.id}">${fieldValue(bean: midiaInstance, field: "titulo")}</g:link></td>
 					
-						<td>${fieldValue(bean: midiaInstance, field: "titulo")}</td>
+						<td>${fieldValue(bean: midiaInstance, field: "ano")}</td>
 					
 					</tr>
 				</g:each>
